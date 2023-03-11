@@ -102,12 +102,16 @@ body {
     margin-top: var(--navbar-height) !important;
 }
 
-.rounded-16{
+.rounded-16 {
     border-radius: 16px !important;
 }
 
-.rounded-9{
+.rounded-9 {
     border-radius: 9px !important;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 576px) {
@@ -115,4 +119,3 @@ body {
         width: 100% !important;
     }
 }
-
