@@ -9,6 +9,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/base.css">
     <link rel="stylesheet" href="/style/navbar.css">
+    <link rel="stylesheet" href="/style/page8.css">
     <link rel="stylesheet" href="/style/page6.css">
     <title>SMART MEDICINE</title>
 </head>
@@ -18,45 +19,92 @@
         <img src="/img/arrow left.svg" alt="">
         <h1 class="fs-6 fw-bold p-2"> Box 1 - Schedule Reminder </h1>
     </nav>
+
     <div class="center-element nav-margin">
-        <div class="bg-secondary-color-2 p-4 rounded-9 d-flex justify-content-between align-items-center">
-            <div>
-                <h6 class="fs-6 fw-bold mb-3"> Medicine Name </h6>
-                <form>
-                    <input type="text" placeholder="Medicine Name" class="mb-4">
-                </form>
+        <form class="bg-secondary-color-2 p-3 rounded-9">
+            <label for="medicineName" class="fs-6 fw-bold">Medicine Name</label>
+            <input type="text" name="" id="medicine" class="py-1 px-2 mt-3">
+        </form>
+
+        <form class="bg-secondary-color-2 p-3 rounded-9 mt-3">
+            <h6 class="text-secondary-color-4 fw-bolder">Reminders Time</h6>
+
+            <label for="frequency" class="d-block mt-5 mb-2">Frequency</label>
+            <select name="frequency" id="frequency">
+                <option value="">X Times A day</option>
+                <option value="">Every X days</option>
+                <option value="">Every X weeks</option>
+            </select>
+
+            <label for="interval" class="mt-4 mb-2">Times</label>
+            <input type="time" class="times-picker py-1 px-2" value="00:00" step="900">
+            <input type="time" class="times-picker py-1 px-2 mt-2" value="00:00" step="900">
+            <input type="time" class="times-picker py-1 px-2 mt-2" value="00:00" step="900">
+            <input type="time" class="times-picker py-1 px-2 mt-2" value="00:00" step="900">
+
+            <label for="interval" class="mt-4 mb-2">Remind Me</label>
+            <div class="d-flex justify-content-between">
+                <div class="reminder pe-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="before">
+                        <label class="form-check-label" for="before">
+                            Before
+                        </label>
+                    </div>
+                    <select name="reminderBefore" id="reminderBefore">
+                        <option value="">5 Minutes</option>
+                        <option value="">10 Minutes</option>
+                        <option value="">15 Minutes</option>
+                    </select>
+                </div>
+                <div class="reminder">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="after">
+                        <label class="form-check-label" for="after">
+                            After
+                        </label>
+                    </div>
+                    <select name="reminderBefore" id="reminderBefore">
+                        <option value="">5 Minutes</option>
+                        <option value="">10 Minutes</option>
+                        <option value="">15 Minutes</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="bg-secondary-color-2 rounded-9 p-4 mt-2">
-            <h6 class="fs-6 fw-bold mb-3"> Reminders Time </h6>
-            <h6 class="fs-6 fw-normal mb-3"> Frequency </h6>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Frequency
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">X times a day</a></li>
-                  <li><a class="dropdown-item" href="#">Every X days</a></li>
-                  <li><a class="dropdown-item" href="#">Every X weeks</a></li>
-                </ul>
-              </div>
-            <h6 class="fs-6 fw-normal mb-3 mt-3">Times</h6>
-        </div>
-        <div class="bg-secondary-color-2 rounded-9 p-4 mt-2">
-            <h6 class="fs-6 fw-bold mb-3"> Schedule</h6>
-            <h6 class="mb-2 mt-4 fw-regular">Start Date</h6>
-            
+        </form>
+
+        <form class="bg-secondary-color-2 p-3 rounded-9 mt-3">
+            <h6 class="text-secondary-color-4 fw-bolder">Schedule</h6>
+            <div class="d-flex align-items-center mt-5 mb-2">
+                <label for="startDate" class="input-label">Start Date</label>
+                <input type="date" name="startDate" id="startDate" class="p-1">
+            </div>
+            <div class="d-flex align-items-center mt-5 mb-2">
+                <label for="endDate" class="input-label">End Date</label>
+                <input type="date" name="startDate" id="endtDate" class="p-1">
+            </div>
+        </form>
+
+        <button type="button" class="c-button mt-3 d-block text-secondary-color-1 fw-bold bg-main-color-1">Add
+            Schedule
+        </button>
+
+        <div class="d-flex justify-content-between">
+            <button type="button" class="c-button mt-3 d-block text-secondary-color-1 fw-bold bg-main-color-1 me-2">
+                Save
+            </button>
+            <button type="button" class="c-button mt-3 d-block text-secondary-color-1 fw-bold bg-danger ms-2">
+                Delete
+            </button>
         </div>
     </div>
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-</script>
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
